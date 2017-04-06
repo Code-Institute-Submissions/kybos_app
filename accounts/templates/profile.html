@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!--Product-->
+	<div id="main_img">
+			<h1>  Personal area </h1>
+	</div>
+	<section id="user_area" class="animatable fadeInUp">
+		<div id="boxform">
+			<div id="tablecontainer">
+				<table>
+					<tr>
+						<th> <span>Username:</span></th>
+						<td> <span> User1</span></td>
+
+					</tr>
+					<tr>
+						<th> <span>Password:</span></th>
+						<td> <span> *****</span> <button id="passbtn" type="submit" class="btn btn-default btn-green"> Change password </button></td>
+					</tr>
+					<tr>
+						<th> <span>Email:</span></th>
+						<td> <span> email@outlook.es <button id="mailbtn" type="submit" class="btn btn-default btn-green"> Change email </button></span></td>
+					</tr>
+					<tr>
+						<th> <span>Orders:</span></th>
+						<td> <button id="orderbtn" type="submit" class="btn btn-default btn-green"> View your orders  </button></td>
+					</tr>
+
+				</table>
+				<div id="green">
+					<div id="pass" class="change">
+						<h1> Change password</h1>
+						<label for="oldpass"> Your password </label>
+						<input type="password" name="oldpass" id="oldpass"><br>
+						<label for="newpass"> New password </label>
+						<input type="password" name="newpass" id="newpass"><br>
+						<label for="renewpass"> Confirm new password </label>
+						<input type="password" name="renewpass" id="renewpass"><br>
+						<button type="submit" class="btn btn-default btn-green"> Change  </button>
+					</div>
+					<div id="mail" class="change">
+						<h1> Change email</h1>
+						<label for="oldmail"> Your email </label>
+						<input type="text" name="oldmail" id="oldmail"><br>
+						<label for="newmail"> New email </label>
+						<input type="text" name="newmail" id="newmail"><br>
+						<label for="renewmail"> Confirm new email </label>
+						<input type="text" name="renewmail" id="renewmail"><br>
+						<button type="submit" class="btn btn-default btn-green"> Change  </button>
+					</div>
+					<div id="order" class="change">
+						<h1> Orders </h1>
+						<div>
+							<p> loremsloremsloremsloremsloremsloremsloremsloremsloremsloremsloremsloremsloremsloremsloremsloremsloremsloremsloremsloremsloremsloremsloremsloremsloremsloremsloremsloremsloremslorems</p>
+						</div>
+					</div>
+					<div id="x"> X </div>
+
+				</div>
+			</div>
+				<button id="unsuscribe" type="submit" class="btndos btn-default btn-green"> Unsuscribe </button>
+
+		</div>
+	</section>
+
+<!--Footer-->
+
+	<footer>
+		<div id="copyright"> Kybos Terriariums @ 2017 </div>
+
+	</footer>
+
+
+{% endblock %}

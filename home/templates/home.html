@@ -1,4 +1,209 @@
 {% extends 'base.html' %}
+{% load static from staticfiles %}
 {% block content %}
-    <img src="{{ MEDIA_URL }}images/logo.png" alt="">
+<!--HOME-->
+
+	<section id="home" data-anchor="Home" style="background-image: url('{% static "cover3.png" %}')">
+		<div id="claim">
+			<span>Lively terrariums.</span>
+		</div>
+
+	</section>
+
+	<section id="concept" data-anchor="Concept">
+
+			<div id="concept_cont" class="col-md-3">
+				<div id="concept_cont_inbox" >
+					<div class="animatable fadeInUp"> </div>
+					<p class="animatable fadeInUp">  La energía de la tierra evoluciona la belleza de la geometría a un siguiente nivel.</p>
+					<div class="animatable fadeInUp"> </div>
+				</div>
+			</div>
+
+			<div id="concept_slider" class="col-md-9 carousel slide carousel-fade" data-ride="carousel">
+				<!--Indicator-->
+				<ol class="carousel indicators">
+					<li data-target="concept_slider" data-slide-to="0" class="active"></li>
+					<li data-target="concept_slider" data-slide-to="1"></li>
+					<li data-target="concept_slider" data-slide-to="2"></li>
+					<li data-target="concept_slider" data-slide-to="3"></li>
+					<li data-target="concept_slider" data-slide-to="4"></li>
+				</ol>
+					<!--data wrapper-->
+				<div class="carousel-inner" role="listbox">
+					<div id="con1" class="item active"> <img src="{{ MEDIA_URL }}images/images_ky/slider_concept/treated/1.png"> </div>
+					<div id="con2" class="item"> <img src="{{ MEDIA_URL }}images/images_ky/slider_concept/treated/2.png" width="100%"></div>
+					<div id="con3" class="item"> <img src="{{ MEDIA_URL }}images/images_ky/slider_concept/treated/3.png" width="100%"> </div>
+					<div id="con4" class="item"> <img src="{{ MEDIA_URL }}images/images_ky/slider_concept/treated/4.png" width="100%"> </div>
+					<div id="sliderxs"> <img src="{{ MEDIA_URL }}images/images_ky/slider_concept/treated/4.png" width="100%"> </div>
+					<div id="con5" class="item"> <img src="{{ MEDIA_URL }}images/images_ky/slider_concept/treated/5.png" width="100%"> </div>
+				</div>
+			</div>
+	</section>
+
+<!--PROCESS-->
+
+	<section id="process" data-anchor="Process">
+		<div id="process_center" class="container">
+			<div id="process_title">
+				<span class="underline"></span>
+				<p class="title"> ABOUT </p>
+			</div>
+			<div id="process_subtitle">
+				<ul>
+					<li id="1" class="subon">  Kybos  </li>
+					<li id="2">  Process </li>
+				</ul>
+			</div>
+			<div id="process_cont" class="row">
+				<!--me-->
+				<div id="me" class="on">
+
+					<div id="me_one" class="animatable fadeInUp">
+							<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum augue ac erat venenatis, id pellentesque massa pellentesque. Nunc dictum interdum sem, nec gravida risus consequat sed. Praesent rhoncus mollis luctus. In in interdum enim. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+					</div>
+					<div id="me_two" class="animatable fadeInUp">
+						<div class="attr">
+							<div class="circle"> <span class="glyphicon glyphicon-tree-conifer"></span></div>
+							<h4> Geometric terrariums </h4>
+							<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum augue ac erat venenatis, id pellentesque massa pellentesque. Nunc dictum interdum sem,</p>
+						</div>
+						<div class="attr">
+							<div class="circle"> <span class="glyphicon glyphicon-scissors"></span></div>
+							<h4> Homemade </h4>
+							<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum augue ac erat venenatis, id pellentesque massa pellentesque. Nunc dictum interdum sem,</p>
+						</div>
+						<div class="attr">
+							<div class="circle"> <span class="glyphicon glyphicon-asterisk"></span></div>
+							<h4> Premium materials </h4>
+							<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum augue ac erat venenatis, id pellentesque massa pellentesque. Nunc dictum interdum sem,</p>
+						</div>
+					</div>
+
+				</div>
+				<!--Process-->
+				<div id="proceso" class="animatable fadeInUp">
+					<div class="processtext col-md-5">
+						<div id="textslider">
+							<span id="prev" class="glyphicon glyphicon-chevron-left"></span>
+							<div id="containerul">
+								<ul id="textwrap">
+									<li class="texts"><h2 > Design</h2><span> 01 </span> <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum augue ac erat venenatis, id pellentesque massa pellentesque.</p></li>
+									<li class="texts"><h2> Cut </h2> <span> 02 </span><p>  ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum augue ac erat venenatis, id pellentesque massa pellentesque. Lorem</p></li>
+									<li class="texts"><h2> Assemble </h2><span> 03 </span><p>  dolor sit amet, consectetur adipiscing elit. Aenean rutrum augue ac erat venenatis, id pellentesque massa pellentesque. Lorem ipsum</p></li>
+									<li class="texts"><h2> Melt </h2><span> 04 </span><p> sit amet, consectetur adipiscing elit. Aenean rutrum augue ac erat venenatis, id pellentesque massa pellentesque. Lorem ipsum dolor </p></li>
+									<li class="texts"><h2> Paint </h2><span> 05 </span><p>  amet, consectetur adipiscing elit. Aenean rutrum augue ac erat venenatis, id pellentesque massa pellentesque. Lorem ipsum dolor sit</p></li>
+								</ul>
+							</div>
+							<span id="next" class="glyphicon glyphicon-chevron-right"></span>
+						</div>
+					</div>
+					<div class="processpict col-md-7 col-sm-12">
+						<div id="imgslider">
+							<img class="img" src="{{ MEDIA_URL }}images/images_ky/process/design.png" width="90%" height="90%">
+							<img class="img" src="{{ MEDIA_URL }}images/images_ky/process/cut.png" width="90%" height="90%">
+							<img class="img" src="{{ MEDIA_URL }}images/images_ky/process/assemble.png" width="90%" height="90%">
+							<img class="img" src="{{ MEDIA_URL }}images/images_ky/process/melt.png" width="90%" height="90%">
+							<img class="img" src="{{ MEDIA_URL }}images/images_ky/process/paint.png" width="90%" height="90%">
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<section id="products" data-anchor="Products">
+		<div id="products_center"  class="container">
+			<div id="products_tittle">
+				<span class="underline"></span>
+				<p class="title"> PRODUCTS </p>
+			</div>
+			<div id="product_description" class="animatable fadeInUp">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum augue ac erat venenatis, id pellentesque massa pellentesque. Nunc dictum interdum sem, nec gravida risus consequat sed. Praesent rhoncus mollis luctus. In in interdum enim</p>
+			</div>
+            {% for product in products %}
+					<div class="col-md-4 col-sm-4 col-xs-11 animatable fadeInUp" >
+						<div id="divcube" class="ficha">
+							<a href="{% url 'product_detail' product.id %}">
+                            <img src="{{ MEDIA_URL }}{{ product.cover }}">
+							<h4> {{ product.title }} </h4>
+							</a>
+						</div>
+					</div>
+            {% endfor %}
+ 	</div>
+	</section>
+	<section id="breath" style="background-image: url('{% static "breath.png" %}')">
+
+	</section>
+	<section id="contact" data-anchor="Contact">
+		<div id="contact_center" class="container">
+			<div id="contact_tittle">
+				<span class="underline"></span>
+				<p class="title"> CONTACT </p>
+			</div>
+			<div id="contact_text">
+				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum augue ac erat venenatis, id pellentesque massa pellentesque</p>
+			</div>
+			<div id="contact_form">
+				<form>
+					<div class="form-group">
+						<label for="nameform"> Name </label>
+						<input type="text" class="form-control" id="nameform" placeholder="Your name" required>
+					</div>
+					<div class="form-group">
+						<label for="emailform"> Email </label>
+						<input type="text" class="form-control" id="emailform" placeholder="Your email">
+					</div>
+					<div class="form-group">
+						<label for="messageform"> Your message </label>
+						<textarea type="textarea" class="form-control" id="messageform" placeholder="Your message" rows="5"></textarea>
+					</div>
+					<button type="submit" class="btn btn-default btn-green"> Send </button>
+				</form>
+			</div>
+		</div>
+	</section>
+
+
+	<footer>
+
+		<div id="navfooter" class="footerbox col-md-4 col-sm-4 col-xs-12">
+			<div  class="footerboxcenter">
+			<ul>
+				<li> <h4> Kybos terrariums </h4></li>
+				<li> <a href="#" data-scroll="Home"> Home </a></li>
+				<li> <a href="#" data-scroll="Process"> About </a></li>
+				<li> <a href="#" data-scroll="Products"> Products </a></li>
+				<li> <a href="#" data-scroll="Contact"> Contact </a></li>
+				<li> <a href="#"> Terms and privacy </a></li>
+			</ul>
+			</div>
+		</div>
+		<div id="logofooter" class="footerbox col-md-4 col-sm-4 col-xs-6">
+		 		<div class="footerboxcenter">
+					<img src="{{ MEDIA_URL }}images/images_ky/logo.png" width="40%">
+					<h5> Lively terrariums <br> 2017</h5>
+		 		</div>
+		</div>
+		<div id="contactfooter" class="footerbox col-md-4 col-sm-4 col-xs-5">
+			<div class="footerboxcenter">
+				<h4> Contact us </h4>
+				<p> mail@kybos.com <br> Calle Mar Báltico numero 23 <br> Telefono 91782238r8123 </p>
+
+			</div>
+		</div>
+
+	</footer>
+
+
+
+
+
+</body>
+	<script src="lib/jquery-3.1.1.min.js"> </script>
+	<script src="lib/bootstrap.min.js"> </script>
+	<script src="kybos.js"> </script>
+</html>
 {% endblock %}
