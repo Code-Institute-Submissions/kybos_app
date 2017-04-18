@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
-	<section id="product">
+	<section id="product" class="container">
 		<div id="imgbox" class="col-md-7 col-sm-7 col-xs-12">
 
 			<div id="bigimg">
-				<div class="big"><img src="{{ MEDIA_URL }}{{ product_details.img_one }}">"></div>
+				<div class="big"><img src="{{ MEDIA_URL }}{{ product_details.img_one }}"></div>
 				<div class="big"><img src="{{ MEDIA_URL }}{{ product_details.img_two }}"></div>
 				<div class="big"><img src="{{ MEDIA_URL }}{{ product_details.img_three }}"></div>
 				<div class="big"><img src="{{ MEDIA_URL }}{{ product_details.img_four }}"></div>
@@ -22,20 +22,20 @@
 		</div>
 
 		<div id="descriptionbox" class="col-md-5 col-sm-5 col-xs-12">
-			<div id="back"> <a href="../../../index_kybos.html#products"><span class="glyphicon glyphicon-chevron-left"> </span><p> Go back </p></a></div>
+			<div id="back"> <a href="{% url 'home' %}#products"><span class="glyphicon glyphicon-chevron-left"> </span><p class="text"> Go back </p></a></div>
 			<div id="title_and_underline">
-				<div class="title"> CUBE </div>
-				<div class="underline">  </div>
+				<div class="title_product_detail"> CUBE </div>
+				<div class="underline_product_detail">  </div>
 			</div>
 			<div id="price">
-				<h2> 20 </h2><span class="glyphicon glyphicon-euro"></span> <p> Medium</p> <br>
+				<h2 class="subheader"> 20 </h2><span class="glyphicon glyphicon-euro"></span> <p> Medium</p> <br>
 			</div>
 			<div id="description">
 				<div class="greenline"> </div>
-				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet cursus felis. Duis vitae venenatis neque. Donec vel facilisis tellus. Nunc rutrum odio ac dui interdum posuere.</p>
+				<p class="text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet cursus felis. Duis vitae venenatis neque. Donec vel facilisis tellus. Nunc rutrum odio ac dui interdum posuere.</p>
 			</div>
 			<form>
-				<fieldset> <span> Customize your kybos: </span></fieldset>
+				<fieldset> <span class="subheader"> Customize your kybos: </span></fieldset>
 				<label> Size </label>
 				<select class="form-control">
 					<option> Big </option>
@@ -52,11 +52,9 @@
 			<div id="gocart">
 				<div>
 					<button type="submit" class="btn btn-default btn-green"> Add to cart </button>
-					<a href="{% url 'check_out' product_details.id %}"><button type="submit" class="btndos btn-default btndos-green" a> Go to cart </button></a>
+					<a href="{% url 'check_out' product_details.id %}"><button type="submit" class="btndos  btndos-green" a> Go to cart </button></a>
 				</div>
-
-
-
 			</div>
 		</div>
+    </section>
 {% endblock %}

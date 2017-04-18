@@ -13,12 +13,13 @@
 
 
 {% block content %}
-    <div id="main_img">
+    <div id="main_img" style="background-image: url('{% static "maincheck.jpg" %}')">
         <h1>  Checkout </h1>
-        <div id="back"> <a href="../../index_kybos.html#products"><span class="glyphicon glyphicon-chevron-left"> </span><p> Back </p></a></div>
+        <div id="back" > <a href="{% url 'home' %}#products"><span class="glyphicon glyphicon-chevron-left white"> </span><p class="white"> Back </p></a></div>
 
 	</div>
-		<div class="boxes animatable fadeInUp">
+    <div class="column_center container">
+		<div class="col-md-12 animatable fadeInUp">
 			<div class="headerbox"> Address </div>
                 <form role="form" method="post" id="payment-form" action="{% url 'check_out' payment.id %}">
                     <div id="credit-card-errors" style="display:none">
@@ -32,21 +33,14 @@
                     </div>
                 </form>
 		</div>
-		<div class="boxes order animatable fadeInUp">
-			<h1> Your order </h1>
-			<div id="boxtable">
-				<table>
-					<tr>
-						<th> Description </th>
-						<th> Price </th>
-					</tr>
-					<tr>
-						<td> <span> Cube: Big(20€) Black 1 unit </span></td>
-						<th> <span> 20€ </span></th>
-					</tr>
-				</table>
+		<div id="boxtable" class="col-md-4  center order animatable fadeInUp">
+			<h1 class="subheader white"> Your order </h1>
+			<div >
+				<p class="subheader " > Products </p>
 			</div>
-			<div id="total"> <span>Total: 20€ </span></div>
+			<div id="total" class="white"> <span class="text white">Total: € </span></div>
+            <hr class="white">
 			<div id="paybutton"> <a href="../thanks/thanks.html"><button type="submit" class="btn btn-default btn-green"> Pay </button></a></div>
 		</div>
+    </div>
 {% endblock %}

@@ -1,5 +1,13 @@
 {% extends 'base.html' %}
 {% load static from staticfiles %}
+{% block headertop %}
+    <div id="headertop">
+        <div id="logo">
+            <img src="{{ MEDIA_URL }}images/logo.png">
+        </div>
+    </div>
+
+{% endblock %}
 {% block content %}
 <!--HOME-->
 
@@ -60,7 +68,7 @@
 				<div id="me" class="on">
 
 					<div id="me_one" class="animatable fadeInUp">
-							<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum augue ac erat venenatis, id pellentesque massa pellentesque. Nunc dictum interdum sem, nec gravida risus consequat sed. Praesent rhoncus mollis luctus. In in interdum enim. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+							<p class="text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum augue ac erat venenatis, id pellentesque massa pellentesque. Nunc dictum interdum sem, nec gravida risus consequat sed. Praesent rhoncus mollis luctus. In in interdum enim. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
 					</div>
 					<div id="me_two" class="animatable fadeInUp">
 						<div class="attr">
@@ -88,11 +96,11 @@
 							<span id="prev" class="glyphicon glyphicon-chevron-left"></span>
 							<div id="containerul">
 								<ul id="textwrap">
-									<li class="texts"><h2 > Design</h2><span> 01 </span> <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum augue ac erat venenatis, id pellentesque massa pellentesque.</p></li>
-									<li class="texts"><h2> Cut </h2> <span> 02 </span><p>  ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum augue ac erat venenatis, id pellentesque massa pellentesque. Lorem</p></li>
-									<li class="texts"><h2> Assemble </h2><span> 03 </span><p>  dolor sit amet, consectetur adipiscing elit. Aenean rutrum augue ac erat venenatis, id pellentesque massa pellentesque. Lorem ipsum</p></li>
-									<li class="texts"><h2> Melt </h2><span> 04 </span><p> sit amet, consectetur adipiscing elit. Aenean rutrum augue ac erat venenatis, id pellentesque massa pellentesque. Lorem ipsum dolor </p></li>
-									<li class="texts"><h2> Paint </h2><span> 05 </span><p>  amet, consectetur adipiscing elit. Aenean rutrum augue ac erat venenatis, id pellentesque massa pellentesque. Lorem ipsum dolor sit</p></li>
+									<li class="texts"><h2 class="subheader" > Design</h2><span> 01 </span> <p class="text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum augue ac erat venenatis, id pellentesque massa pellentesque.</p></li>
+									<li class="texts"><h2 class="subheader"> Cut </h2> <span> 02 </span><p class="text">  ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum augue ac erat venenatis, id pellentesque massa pellentesque. Lorem</p></li>
+									<li class="texts"><h2 class="subheader"> Assemble </h2><span> 03 </span><p class="text">  dolor sit amet, consectetur adipiscing elit. Aenean rutrum augue ac erat venenatis, id pellentesque massa pellentesque. Lorem ipsum</p></li>
+									<li class="texts"><h2 class="subheader"> Melt </h2><span> 04 </span><p class="text"> sit amet, consectetur adipiscing elit. Aenean rutrum augue ac erat venenatis, id pellentesque massa pellentesque. Lorem ipsum dolor </p></li>
+									<li class="texts"><h2 class="subheader"> Paint </h2><span> 05 </span><p class="text">  amet, consectetur adipiscing elit. Aenean rutrum augue ac erat venenatis, id pellentesque massa pellentesque. Lorem ipsum dolor sit</p></li>
 								</ul>
 							</div>
 							<span id="next" class="glyphicon glyphicon-chevron-right"></span>
@@ -120,7 +128,7 @@
 				<p class="title"> PRODUCTS </p>
 			</div>
 			<div id="product_description" class="animatable fadeInUp">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum augue ac erat venenatis, id pellentesque massa pellentesque. Nunc dictum interdum sem, nec gravida risus consequat sed. Praesent rhoncus mollis luctus. In in interdum enim</p>
+				<p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum augue ac erat venenatis, id pellentesque massa pellentesque. Nunc dictum interdum sem, nec gravida risus consequat sed. Praesent rhoncus mollis luctus. In in interdum enim</p>
 			</div>
             {% for product in products %}
 					<div class="col-md-4 col-sm-4 col-xs-11 animatable fadeInUp" >
@@ -130,6 +138,7 @@
 							<h4> {{ product.title }} </h4>
 							</a>
 						</div>
+
 					</div>
             {% endfor %}
  	</div>
@@ -144,20 +153,20 @@
 				<p class="title"> CONTACT </p>
 			</div>
 			<div id="contact_text">
-				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum augue ac erat venenatis, id pellentesque massa pellentesque</p>
+				<p class="text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum augue ac erat venenatis, id pellentesque massa pellentesque</p>
 			</div>
 			<div id="contact_form">
 				<form>
 					<div class="form-group">
-						<label for="nameform"> Name </label>
+						<label class="subheader" for="nameform"> Name </label>
 						<input type="text" class="form-control" id="nameform" placeholder="Your name" required>
 					</div>
 					<div class="form-group">
-						<label for="emailform"> Email </label>
+						<label class="subheader" for="emailform"> Email </label>
 						<input type="text" class="form-control" id="emailform" placeholder="Your email">
 					</div>
 					<div class="form-group">
-						<label for="messageform"> Your message </label>
+						<label class="subheader" for="messageform"> Your message </label>
 						<textarea type="textarea" class="form-control" id="messageform" placeholder="Your message" rows="5"></textarea>
 					</div>
 					<button type="submit" class="btn btn-default btn-green"> Send </button>
@@ -166,44 +175,4 @@
 		</div>
 	</section>
 
-
-	<footer>
-
-		<div id="navfooter" class="footerbox col-md-4 col-sm-4 col-xs-12">
-			<div  class="footerboxcenter">
-			<ul>
-				<li> <h4> Kybos terrariums </h4></li>
-				<li> <a href="#" data-scroll="Home"> Home </a></li>
-				<li> <a href="#" data-scroll="Process"> About </a></li>
-				<li> <a href="#" data-scroll="Products"> Products </a></li>
-				<li> <a href="#" data-scroll="Contact"> Contact </a></li>
-				<li> <a href="#"> Terms and privacy </a></li>
-			</ul>
-			</div>
-		</div>
-		<div id="logofooter" class="footerbox col-md-4 col-sm-4 col-xs-6">
-		 		<div class="footerboxcenter">
-					<img src="{{ MEDIA_URL }}images/images_ky/logo.png" width="40%">
-					<h5> Lively terrariums <br> 2017</h5>
-		 		</div>
-		</div>
-		<div id="contactfooter" class="footerbox col-md-4 col-sm-4 col-xs-5">
-			<div class="footerboxcenter">
-				<h4> Contact us </h4>
-				<p> mail@kybos.com <br> Calle Mar Báltico numero 23 <br> Telefono 91782238r8123 </p>
-
-			</div>
-		</div>
-
-	</footer>
-
-
-
-
-
-</body>
-	<script src="lib/jquery-3.1.1.min.js"> </script>
-	<script src="lib/bootstrap.min.js"> </script>
-	<script src="kybos.js"> </script>
-</html>
 {% endblock %}
