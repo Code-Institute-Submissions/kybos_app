@@ -6,6 +6,7 @@ from accounts.forms import UserLoginForm, UserRegistrationForm
 from django.shortcuts import render, HttpResponseRedirect
 from django.template.context_processors import csrf
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 
 
 
@@ -66,3 +67,7 @@ def register(request):
     args = {'form': form}
     args.update(csrf(request))
     return render(request, 'register.html', args)
+
+def remove_account(request, id):
+    User.objects.get(id=id).delete()
+    return redirect(reverse('home'))

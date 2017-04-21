@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 
 import os
 import env
-import dj_database_url
+# import dj_database_url
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -87,7 +87,11 @@ WSGI_APPLICATION = 'kybos_app.wsgi.application'
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
 
-DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL')) }
+DATABASES = {'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+	}
+}
 
 
 AUTHENTICATION_BACKENDS = [
@@ -153,10 +157,10 @@ AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
 AWS_S3_HOST = 's3-eu-west-1.amazonaws.com'
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
-STATICFILES_LOCATION = 'static'
-STATICFILES_STORAGE = 'custom_storages.StaticStorage'
-STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, STATICFILES_LOCATION)
+# STATICFILES_LOCATION = 'static'
+# STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+# STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, STATICFILES_LOCATION)
 
-MEDIAFILES_LOCATION = 'media'
-MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
-DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+# MEDIAFILES_LOCATION = 'media'
+# MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
+# DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'

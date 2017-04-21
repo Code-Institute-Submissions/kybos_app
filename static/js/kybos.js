@@ -6,13 +6,16 @@ $(document).ready(function() {
 
 /*NAV*/
 
+$(document).on('click', '.confirm-delete', function(){
+    return confirm('Are you sure to proceed?');
+});
+
 
 		/*NAV BEING FIXED*/
 
 
 $(document).on('scroll',function(){
 	if($(document).scrollTop()>200){
-		console.log("heeeeeello");
 		$("header").addClass('fixed');
 		$("#headertop").addClass('hidden');
 

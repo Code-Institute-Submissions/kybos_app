@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+
+{% block content %}
+
+
+	<section id="thanks" class="animatable fadeInUp">
+		<div id="content_thanks">
+			<img src="{% static "oct2.png" %}">
+			<div id="text_thanks">
+				<h1> Thank you!</h1>
+				<p> An email has sent to you to confirm your purchase. Enjoy!</p>
+				<a href="{% url 'home' %}"><button type="submit" class="btn btn-default btn-green"> Go to home </button></a>
+			</div>
+		</div>
+    </section>
+
+
+{% endblock %}

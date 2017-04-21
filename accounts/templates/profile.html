@@ -11,7 +11,7 @@
 			<div id="tablecontainer">
                 <p class="text"><span class="subheader"> User name: </span> {{ user.username }}</p>
                 <p class="text"><span class="subheader"> User email: </span> {{ user.email }}</p>
-				<button id="unsuscribe" type="submit" class="btndos  btndos-green"> Unsuscribe </button>
+                <a href="{% url 'remove_account' user.id %}" class="confirm-delete"> <button id="unsuscribe" type="submit" class="btndos  btndos-green"> Unsuscribe </button></a>
 			</div>
 
 		</div>

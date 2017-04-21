@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+{% load bootstrap_tags %}
+
+{% block head_js %}
+  <script src="https://js.stripe.com/v2/" type="text/javascript"></script>
+  <script type="text/javascript">
+      //<![CDATA[
+      Stripe.publishableKey = '{{ publishable }}';
+      //]]>
+  </script>
+  <script type="text/javascript" src="{% static 'js/stripe.js' %}"></script>
+{% endblock %}
+
+
+
+{% block content %}
+    <div id="main_img" style="background-image: url('{% static "maincheck.jpg" %}')">
+        <h1>  Cart </h1>
+        <div id="back" > <a href="{% url 'home' %}#products"><span class="glyphicon glyphicon-chevron-left white"> </span><p class="white"> Back </p></a></div>
+
+	</div>
+    <div class="column_center container">
+        <div id="cart_list" class="row">
+            <div class="col-md-8">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th class="subheader">Name</th>
+                            <th class="subheader">Description</th>
+                            <th class="subheader">Price</th>
+                            <th class="subheader">Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in items %}
+                            <tr>
+                                <td class="text">{{ item.product.title }}</td>
+                                <td class="text description_cart">{{ item.product.description }}</td>
+                                <td class="text">{{ item.product.price_big }}</td>
+                                <td class="text">{{ item.quantity }}</td>
+                                <td class="text"><a class="confirm-delete" href="{% url 'remove_from_cart' item.id %}">Remove</a></td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+               <div id="boxtable" class="col-md-4  center order">
+                <h1 class="subheader white"> Your order </h1>
+                <div >
+                    <p class="subheader " > Products </p>
+                    {% for item in items %}
+                        <p> {{ item.quantity }} x {{ item.product.title }}</p>
+                    {% endfor %}
+                </div>
+                <div id="total" class="white"> <span class="text white">Total: {{ total }}€ </span></div>
+                <hr class="white">
+            </div>
+        </div>
+        <div>
+            <form role="form" method="post" id="payment-form" action="{% url 'cart_user' %}">
+            <div id="credit-card-errors" style="display:none">
+                <div class="alert-message block-message error" id="stripe-error-message"></div>
+            </div>
+            <legend class="subheader">Payments details</legend>
+            {% csrf_token %}
+            {{ form | as_bootstrap }}
+                <hr>
+                <div id="paybutton">
+                <button id="submit_payment_btn" name="commit" type="submit" value="Submit Payment" class="btn btn-default btn-green"> Pay </button>
+            </div>
+            </form>
+        </div>
+
+
+    </div>
+{% endblock %}

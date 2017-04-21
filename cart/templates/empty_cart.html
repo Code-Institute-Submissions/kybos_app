@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+
+
+{% block content %}
+    <div id="main_img" style="background-image: url('{% static "maincheck.jpg" %}')">
+        <h1>  Cart </h1>
+        <div id="back" > <a href="{% url 'home' %}#products"><span class="glyphicon glyphicon-chevron-left white"> </span><p class="white"> Back </p></a></div>
+
+	</div>
+    <div class="column_center container">
+        <div id="cart_list" class="row">
+            <div class="col-md-8">
+                <div clas="subheader">You have no items in your cart.</div>
+                <div><a href="{% url 'home' %}#products" class="subheader">Go to products <span class="glyphicon glyphicon-chevron-right white"> </span></a></div>
+            </div>
+               <div id="boxtable" class="col-md-4  center order">
+                <h1 class="subheader white"> Your order </h1>
+                <div >
+                    <p class="subheader " > Products </p>
+
+                </div>
+                <div id="total" class="white"> <span class="text white">Total: 0 € </span></div>
+                <hr class="white">
+            </div>
+        </div>
+    </div>
+{% endblock %}
