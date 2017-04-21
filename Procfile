@@ -1,0 +1,1 @@
+web: gunicorn kybos_app.wsgi:application
