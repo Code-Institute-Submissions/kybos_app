@@ -17,19 +17,19 @@
 {% block content %}
     <div id="main_img" style="background-image: url('{% static "maincheck.jpg" %}')">
         <h1>  Cart </h1>
-        <div id="back" > <a href="{% url 'home' %}#products"><span class="glyphicon glyphicon-chevron-left white"> </span><p class="white"> Back </p></a></div>
 
 	</div>
+    <div id="back" class="container" ><button class="btn btn-default btn-green" onclick="javascript:history.back()"> <span class="glyphicon glyphicon-chevron-left green"> </span><p class="green" > Atrás </p></button></div>
     <div class="column_center container">
         <div id="cart_list" class="row">
             <div class="col-md-8">
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th class="subheader">Name</th>
-                            <th class="subheader">Description</th>
-                            <th class="subheader">Price</th>
-                            <th class="subheader">Quantity</th>
+                            <th class="subheader"> Nombre </th>
+                            <th class="subheader"> Descripción </th>
+                            <th class="subheader"> Precio </th>
+                            <th class="subheader"> Cantidad </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -39,16 +39,16 @@
                                 <td class="text description_cart">{{ item.product.description }}</td>
                                 <td class="text">{{ item.product.price_big }}</td>
                                 <td class="text">{{ item.quantity }}</td>
-                                <td class="text"><a class="confirm-delete" href="{% url 'remove_from_cart' item.id %}">Remove</a></td>
+                                <td class="text"><a class="confirm-delete" href="{% url 'remove_from_cart' item.id %}"> Eliminar </a></td>
                             </tr>
                         {% endfor %}
                     </tbody>
                 </table>
             </div>
                <div id="boxtable" class="col-md-4  center order">
-                <h1 class="subheader white"> Your order </h1>
+                <h1 class="subheader white"> Tu orden </h1>
                 <div >
-                    <p class="subheader " > Products </p>
+                    <p class="subheader " > Productos </p>
                     {% for item in items %}
                         <p> {{ item.quantity }} x {{ item.product.title }}</p>
                     {% endfor %}
@@ -62,12 +62,12 @@
             <div id="credit-card-errors" style="display:none">
                 <div class="alert-message block-message error" id="stripe-error-message"></div>
             </div>
-            <legend class="subheader">Payments details</legend>
+            <legend class="subheader"> Detalles de pago </legend>
             {% csrf_token %}
             {{ form | as_bootstrap }}
                 <hr>
                 <div id="paybutton">
-                <button id="submit_payment_btn" name="commit" type="submit" value="Submit Payment" class="btn btn-default btn-green"> Pay </button>
+                <button id="submit_payment_btn" name="commit" type="submit" value="Submit Payment" class="btn btn-default btn-green"> Pagar </button>
             </div>
             </form>
         </div>

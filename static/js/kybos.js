@@ -14,6 +14,8 @@ $(document).on('click', '.confirm-delete', function(){
 		/*NAV BEING FIXED*/
 
 
+
+
 $(document).on('scroll',function(){
 	if($(document).scrollTop()>200){
 		$("header").addClass('fixed');
@@ -26,6 +28,7 @@ $(document).on('scroll',function(){
 	};
 
 });
+
 
 		/*NAV LINKS*/
 

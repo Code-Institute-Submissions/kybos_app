@@ -201,6 +201,10 @@ body{
         font-size: 16px!important;
     }
 
+        #headertop{
+        position: absolute!important;
+    }
+
  }   
 
 
@@ -220,6 +224,10 @@ body{
         min-height: 80px!important;
 
     }
+        #headertop{
+        position: absolute!important;
+    }
+
 
     /*NAV*/
 
@@ -263,11 +271,7 @@ body{
     #navind{
         display: none;
     }
-    #headertop{
-    display: none;
-    }
-    
-  
+
 
     .navbar-default .navbar-nav {  /* Nav links properties */
     margin: 0px;
@@ -289,7 +293,6 @@ body{
     a.nav-link{  /* Deleting login nav link margin*/ 
         margin: 0px !important;
     }
-
 
 
     /*HOME*/
@@ -441,7 +444,6 @@ body{
 
     #products{
         height: 1700px!important;
-        min-height: 2000px!important;
     }
 
     #products_tittle{
@@ -549,6 +551,14 @@ body{
     #payment-form {
         width: 300px !important;
     }
+
+    .quick{
+        margin-top: 130px!important;
+        width: 80%!important;
+        text-align: center;
+    }
+
+
 }   
 
 
@@ -1851,7 +1861,7 @@ footer{
 }
 
 #div_id_expiry_year, #div_id_expiry_month{
-    width: 60px!important;
+    width: 150px!important;
     display: inline;
     float: right;
 }
@@ -1972,6 +1982,17 @@ legend.subheader{
     margin-top: 30px;
 }
 
+#id_expiry_year, #id_expiry_month{
+    width: 100% !important;
+}
+
+#div_id_cvv{
+    width: 80px!important;
+}
+
+#back button{
+    transform: scale(0.8);
+}
                             /* CART */
 
 

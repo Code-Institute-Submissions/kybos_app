@@ -22,31 +22,31 @@
 		</div>
 
 		<div id="descriptionbox" class="col-md-5 col-sm-5 col-xs-12">
-			<div id="back"> <a href="{% url 'home' %}#products"><span class="glyphicon glyphicon-chevron-left"> </span><p class="text"> Go back </p></a></div>
+			<div id="back"> <a href="{% url 'home' %}#products"><span class="glyphicon glyphicon-chevron-left"> </span><p class="text"> Atrás </p></a></div>
 			<div id="title_and_underline">
-				<div class="title_product_detail"> CUBE </div>
+				<div class="title_product_detail"> {{ product_details.title }} </div>
 				<div class="underline_product_detail">  </div>
 			</div>
 			<div id="price">
-				<h2 class="subheader"> {{ product_details.price_big }} </h2><span class="glyphicon glyphicon-euro"></span> <p> Medium</p> <br>
+				<h2 class="subheader"> {{ product_details.price_big }} </h2><span class="glyphicon glyphicon-euro"></span>  <br>
 			</div>
 			<div id="description">
 				<div class="greenline"> </div>
-				<p class="text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet cursus felis. Duis vitae venenatis neque. Donec vel facilisis tellus. Nunc rutrum odio ac dui interdum posuere.</p>
+				<p class="text"> {{ product_details.description }}</p>
 			</div>
 			<form>
-				<fieldset> <span class="subheader"> Customize your kybos: </span></fieldset>
-				<label> Size </label>
+				<fieldset> <span class="subheader"> Personaliza tu kybos: </span></fieldset>
+				<label> Tamaño </label>
 				<select class="form-control">
-					<option> Big </option>
-					<option> Medium </option>
-					<option> Small </option>
+					<option> Grande </option>
+					<option> Mediano </option>
+					<option> Pequeño </option>
 				</select>
-				<label> Line color </label>
+				<label> Color  </label>
 				<select class="form-control">
-					<option> Black </option>
-					<option> Silver </option>
-					<option> Brown </option>
+					<option> Negro </option>
+					<option> Plata </option>
+					<option> Bronce </option>
 				</select>
 			</form>
 			<div id="gocart">
@@ -54,12 +54,12 @@
                     <div>
                         <form method="post" action="{% url 'add_to_cart' product_details.id %}">
                             {% csrf_token %}
-                            <label for="quantity"> Select the quantity</label>
+                            <label for="quantity"> Elige la cantidad </label>
                              <input id="myNumber" name='quantity' type="number" text="1" min="1" max="999"><br>
-                            <button type="submit" class="btn btn-default btn-green"> Add to cart </button>
+                            <button type="submit" class="btn btn-default btn-green"> Añadir a la cesta </button>
                         </form>
                     </div>
-					<a href="{% url 'cart_user' %}"><button type="submit" class="btndos  btndos-green" a> Go to cart </button></a>
+					<a href="{% url 'cart_user' %}"><button type="submit" class="btndos  btndos-green" a> Ir a la cesta </button></a>
 				</div>
 			</div>
 		</div>
